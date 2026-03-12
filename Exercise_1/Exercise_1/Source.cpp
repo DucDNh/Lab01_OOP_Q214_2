@@ -13,16 +13,16 @@ int gcd(int a, int b) // Xây dựng hàm tìm ước chung lớn nhất, phục
 			b %= a;
 	}
 	if (a == 0)
-		return b; // Dựa theo thuật toán tìm ước chung lớn nhất, khi này b là UCLN, nên ta trả về b.
+		return b; // Khi a = 0, b là UCLN. Hàm trả về b.
 	else
-		return a; // Dựa theo thuật toán tìm ước chung lớn nhất, khi này a là UCLN, nên ta trả về a.
+		return a; // Khi b = 0, a là UCLN. Hàm trả về a.
 }
 
-class Phanso // Xây dựng class phân số.
+class Phanso 
 {
-	int tu, mau; // Xây dựng 2 thuộc tính cơ bản của một phân số gồm : Từ, mẫu.
+	int tu, mau;
 public:
-	void nhap() // Xây dựng method để nhập vào phân số.
+	void nhap() 
 	{
 		char gachcheo;
 		cout << "Nhap phan so (a/b) : ";
@@ -44,14 +44,14 @@ public:
 			mau = -mau;
 		}
 	}
-	void xuat() // Xây dựng method in ra phân số.
+	void xuat() // Hiển thị phân số dưới định dạng phù hợp.
 	{
-		if (mau == 1)
-			cout << tu << endl; // Không in mẫu, khi mẫu = 1.
+		if (mau == 1) // Xây dựng định dạng khi in cho phân số.
+			cout << tu << endl; 
 		else if (tu == 0)
-			cout << 0 << endl; // Không in mẫu khi tử = 0.
+			cout << 0 << endl; 
 		else
-			cout << tu << '/' << mau << endl; // Định dạng in ra : a/b hoặc a.
+			cout << tu << '/' << mau << endl; 
 	}
 };
 
