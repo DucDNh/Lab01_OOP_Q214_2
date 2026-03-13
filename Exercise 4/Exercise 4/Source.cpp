@@ -44,15 +44,15 @@ public:
 		tem_date.month = month;
 		tem_date.year = year;
 
-		// Xử lý logic "tràn" ngày: Nếu ngày cộng thêm vượt quá số ngày cho phép của tháng hiện tại
+		// Xử lý "tràn" ngày: Nếu ngày cộng thêm vượt quá số ngày cho phép của tháng hiện tại
 		if (tem_date.day > max_days(month, year)) {
-			tem_date.day = 1;      // Reset về ngày đầu tiên của tháng mới
-			tem_date.month++;      // Tăng lên tháng tiếp theo
+			tem_date.day = 1;   
+			tem_date.month++;      
 
-			// Xử lý logic "tràn" tháng: Nếu tháng vượt quá 12 (chuyển giao năm mới)
+			// Xử lý "tràn" tháng: Nếu tháng vượt quá 12 (chuyển giao năm mới)
 			if (tem_date.month > 12) {
-				tem_date.month = 1; // Reset về tháng 1
-				tem_date.year++;    // Tăng lên năm tiếp theo
+				tem_date.month = 1; 
+				tem_date.year++;    
 			}
 		}
 		return tem_date;
